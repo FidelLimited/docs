@@ -162,7 +162,7 @@ _Not useful for Loyalty/Select Transactions use cases, at the moment._
 ### start(context: Context)
 
 Starts a card enrollment flow. If you set the `programType` to:
-1. `TRANSACTION_STREAM`, a card enrollment flow will be started, for a Transaction Stream program (usually used by Expense Management applications).
+1. `TRANSACTION_STREAM`, a card enrollment flow will be started, for a Transaction Stream program (usually used by Stream applications).
 2. `TRANSACTION_SELECT`, a regular card enrollment flow will be started, for your Transaction Select program (usually used by Loyalty applications).
 
 #### Parameters

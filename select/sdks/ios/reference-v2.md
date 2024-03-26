@@ -163,7 +163,7 @@ _Not useful for Loyalty/Select Transactions use cases, at the moment._
 ### start(from:)
 
 Starts a card enrollment flow. If you set the `programType` to:
-1. `.transactionStream`, a verified card enrollment flow will be started, for a Transaction Stream program (usually used by Expense Management applications).
+1. `.transactionStream`, a verified card enrollment flow will be started, for a Transaction Stream program (usually used by Stream applications).
 2. `.transactionSelect`, a regular card enrollment flow will be started, for your Select Transactions program (usually used by Loyalty applications).
 
 #### Parameters

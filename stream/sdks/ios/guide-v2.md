@@ -1,6 +1,6 @@
 # A guide for verified card enrollment with the iOS SDK
 
-Our SDK is built to also support other use cases (other than Expense Management). Please take the following steps to integrate and configure the SDK for your Expense Management application.
+Our SDK is built to also support other use cases (other than Stream). Please take the following steps to integrate and configure the SDK for your Stream application.
 
 > Note: If an example project helps with your SDK integration & configuration, please check our [GitHub repository](https://github.com/FidelLimited/fidel-ios).
 
@@ -56,7 +56,7 @@ pod install
 pod update Fidel
 ```
 
-> Note: For information about all the Fidel API iOS SDK versions, that were used by expense management applications, please check our Releases page.
+> Note: For information about all the Fidel API iOS SDK versions, that were used by Stream applications, please check our Releases page.
 
 #### Manual framework integration
 
@@ -108,7 +108,7 @@ Fidel.programID = "Your-Program-ID"
 
 ### 6. Set the program type
 
-For your Expense Management application you'll need to use a Transaction Stream program, so please set:
+For your Stream application you'll need to use a Transaction Stream program, so please set:
 
 ```swift
 Fidel.programType = .transactionStream
@@ -146,7 +146,7 @@ Fidel.privacyPolicyURL = "https://yourwebsite.com/privacy-policy"
 
 ### 8. Set the allowed country(ies) of card issuance
 
-During card enrollment process, the cardholder needs to select the country where the card was issued. Expense Management use cases can be activated only for cards issued in the **United States**, **Canada** and **United Kingdom**. Please configure the SDK with the following allowed countries or a subset of these countries, depending on the countries where your application is available. If the subset contains a single country, the cardholders will not need to pick the country. The country that you set will be the default country of issue for the cards that are enrolled in your program.
+During card enrollment process, the cardholder needs to select the country where the card was issued. Stream use cases can be activated only for cards issued in the **United States**, **Canada** and **United Kingdom**. Please configure the SDK with the following allowed countries or a subset of these countries, depending on the countries where your application is available. If the subset contains a single country, the cardholders will not need to pick the country. The country that you set will be the default country of issue for the cards that are enrolled in your program.
 
 ```swift
 Fidel.allowedCountries = [.unitedStates, .unitedKingdom, .canada]
@@ -154,7 +154,7 @@ Fidel.allowedCountries = [.unitedStates, .unitedKingdom, .canada]
 
 ### 9. Set Visa as the only supported card scheme
 
-For Expense Management applications, for now, only Visa card schemes are supported. Please configure the SDK with the following property:
+For Stream applications, for now, only Visa card schemes are supported. Please configure the SDK with the following property:
 
 ```swift
 Fidel.supportedCardSchemes = [.visa]

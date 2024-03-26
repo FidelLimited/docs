@@ -39,7 +39,7 @@ By setting this property we add a link to your Terms & Conditions in the consent
 
 ### Optional properties (but we recommend setting them)
 
-The following properties are technically not mandatory to be set. However, in order to make your Expense Management use case work with your Transaction Stream program, please consider setting them correctly.
+The following properties are technically not mandatory to be set. However, in order to make your Stream use case work with your Transaction Stream program, please consider setting them correctly.
 
 #### programType: ProgramType
 
@@ -47,7 +47,7 @@ Default value: `.transactionSelect`
 
 It specifies the type of program you want to enroll cards into. The `ProgramType` influences the flow that the SDK will show to cardholders when enrolling cards. 
 
-> Note: For your Expense Management application, you need to use a Transaction Stream program, so you need to set this property to `.transactionStream`.
+> Note: For your Stream application, you need to use a Transaction Stream program, so you need to set this property to `.transactionStream`.
 
 #### supportedCardSchemes
 
@@ -55,7 +55,7 @@ Type: `Set<CardScheme>`
 
 Default value: `[.visa, .mastercard, .americanExpress]`
 
-> Important: For Expense Management use cases via Transaction Stream programs, only Visa cards are supported. So you need to set this property to `[.visa]`.
+> Important: For Stream use cases via Transaction Stream programs, only Visa cards are supported. So you need to set this property to `[.visa]`.
 
 Sets a list of supported card schemes. If a card scheme is supported, cardholders will be able to enroll and verify their card. If a card scheme is not in the list, then the cardholders will see an error message while typing or pasting the unsupported card number.
 
@@ -73,7 +73,7 @@ Type: `Set<Country>`
 
 Default value: `[.canada, .ireland, .japan, .unitedKingdom, .unitedStates, .sweden, .unitedArabEmirates, .norway]`
 
-> Important: For Expense Management use cases via Transaction Stream programs, please set only a subset of the following countries: `.unitedKingdom`, `.unitedStates`, `.canada`, as these are the only supported countries.
+> Important: For Stream use cases via Transaction Stream programs, please set only a subset of the following countries: `.unitedKingdom`, `.unitedStates`, `.canada`, as these are the only supported countries.
 
 Sets the list of countries that cardholders can pick to be the card issuing country. When two or more countries are set, cardholders will be able to select the card issuing country with our country selection UI.
 
@@ -99,7 +99,7 @@ This text informs the cardholder how to opt out of transaction monitoring in you
 
 Default value: `.unitedKingdom`
 
-> Important: For Expense Management use cases via Transaction Stream programs, please use one of the following cases: `.unitedKingdom`, `.unitedStates`, `.canada`, as these are the only supported countries.
+> Important: For Stream use cases via Transaction Stream programs, please use one of the following cases: `.unitedKingdom`, `.unitedStates`, `.canada`, as these are the only supported countries.
 
 Sets the `Country` that will be selected by default when the user opens the card enrollment screen. If the `defaultSelectedCountry` is not part of the `allowedCountries` list, then the first country in the `allowedCountries` list will be selected.
 
@@ -176,7 +176,7 @@ This value is used in the consent text when enrolling a card issued in a United 
 ### start(from:)
 
 Starts a card enrollment flow. If you set the `programType` to:
-1. `.transactionStream`, a verified card enrollment flow will be started, for your Transaction Stream program (usually used by Expense Management applications).
+1. `.transactionStream`, a verified card enrollment flow will be started, for your Transaction Stream program (usually used by Stream applications).
 2. `.transactionSelect`, a regular card enrollment flow will be started, for your Transaction Select program (usually used by Loyalty applications).
 
 #### Parameters
