@@ -37,12 +37,6 @@ Fidel API provides a developer-friendly, secure and reliable API to link payment
 
 Once a card is enrolled and verified, every payment event (i.e. authorization, clearing, refund) from that card will be sent to your server in real time. The transaction data you receive is of high quality, accuracy and consistency. This allows you to build a rich experience for cardholders at the moment the transaction is made, while they are still at the terminal or checkout page.
 
-## Card Coverage
-
-The Transaction Stream API is available for the following card networks and countries:
-
-<img src="https://docs.fidel.uk/assets/images/stream-card-coverage.png" srcset="https://docs.fidel.uk/assets/images/stream-card-coverage.png, https://docs.fidel.uk/assets/images/stream-card-coverage@2x.png 2x" alt="Stream Card Coverage" />
-
 ## Transaction Life Cycle
 
 To understand how the Transaction Stream API works and the data it provides to you, it’s important to understand the authorization processes and fund movements that happen when a cardholder makes a purchase.
