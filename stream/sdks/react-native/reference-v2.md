@@ -209,7 +209,7 @@ By setting this property we add a link to your Terms & Conditions in the consent
 
 ### Optional properties (but we recommend setting them)
 
-The following properties are technically not mandatory to be set. However, in order to make your Expense Management use case work with your Transaction Stream program, please consider setting them correctly.
+The following properties are technically not mandatory to be set. However, in order to make your Stream use case work with your Transaction Stream program, please consider setting them correctly.
 
 #### programType
 
@@ -217,7 +217,7 @@ Default value: `Fidel.ProgramType.transactionSelect`
 
 It specifies the type of program you want to enroll cards into. It also influences the flow that the SDK will show to cardholders when enrolling cards.
 
-> Note: For your Expense Management application, you need to use a Transaction Stream program, so you need to set this property to `Fidel.ProgramType.transactionStream`.
+> Note: For your Stream application, you need to use a Transaction Stream program, so you need to set this property to `Fidel.ProgramType.transactionStream`.
 
 #### consentText.deleteInstructions
 
@@ -243,7 +243,7 @@ Expected type: `array`
 
 Default value: `[Fidel.CardScheme.visa, Fidel.CardScheme.mastercard, Fidel.CardScheme.americanExpress]`
 
-> Important: For Expense Management use cases via Transaction Stream programs, only Visa cards are supported. So you need to set this property to `[Fidel.CardScheme.visa]`.
+> Important: For Stream use cases via Transaction Stream programs, only Visa cards are supported. So you need to set this property to `[Fidel.CardScheme.visa]`.
 
 Sets a list of supported card schemes. If a card scheme is supported, cardholders will be able to enroll and verify their card. If a card scheme is not in the list, then the cardholders will see an error message while typing or pasting the unsupported card number.
 
@@ -261,7 +261,7 @@ If you set a value with only one country, the country selection UI will not be d
 
 If you set an empty value, you will not be able to start the verified enrollment flow. Instead you will receive an error in the main [`callback`](#main-results-callback) (`Fidel.ErrorType.sdkConfigurationError`), immediately after the attempt to start.
 
-> Important: For Expense Management use cases via Transaction Stream programs, please set only a subset of the following countries: `Fidel.Country.unitedKingdom`, `Fidel.Country.unitedStates`, `Fidel.Country.canada`, as these are the only supported countries.
+> Important: For Stream use cases via Transaction Stream programs, please set only a subset of the following countries: `Fidel.Country.unitedKingdom`, `Fidel.Country.unitedStates`, `Fidel.Country.canada`, as these are the only supported countries.
 
 #### options.defaultSelectedCountry
 
@@ -269,7 +269,7 @@ Default value: `Fidel.Country.unitedKingdom`
 
 Sets the `Fidel.Country` that will be selected by default when the user opens the card enrollment screen. If the `defaultSelectedCountry` is not part of the `allowedCountries` list, then the first country in the `allowedCountries` list will be selected.
 
-> Important: For Expense Management use cases via Transaction Stream programs, please use one of the following cases: `Fidel.Country.unitedKingdom`, `Fidel.Country.unitedStates`, `Fidel.Country.canada`, as these are the only supported countries.
+> Important: For Stream use cases via Transaction Stream programs, please use one of the following cases: `Fidel.Country.unitedKingdom`, `Fidel.Country.unitedStates`, `Fidel.Country.canada`, as these are the only supported countries.
 
 ### Optional properties
 
@@ -353,7 +353,7 @@ Parameters:
 ### Fidel.start()
 
 Starts a card enrollment flow. If you set the `programType` to:
-1. `Fidel.ProgramType.transactionStream`, a verified card enrollment flow will be started, for your Transaction Stream program (usually used by Expense Management applications).
+1. `Fidel.ProgramType.transactionStream`, a verified card enrollment flow will be started, for your Transaction Stream program (usually used by Stream applications).
 2. `Fidel.ProgramType.transactionSelect`, a regular card enrollment flow will be started, for your Transaction Select program (usually used by Loyalty applications).
 
 ### Fidel.verifyCard(params)

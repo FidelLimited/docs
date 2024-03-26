@@ -1,6 +1,6 @@
 # A guide for verified card enrollment with the React Native SDK
 
-Our SDK is built to also support other use cases (other than Expense Management). Please take the following steps to integrate and configure the SDK for your Expense Management application.
+Our SDK is built to also support other use cases (other than Stream). Please take the following steps to integrate and configure the SDK for your Stream application.
 
 > Note: If an example project helps with your SDK integration & configuration, please check our [GitHub repository](https://github.com/FidelLimited/rn-sdk).
 
@@ -71,7 +71,7 @@ Fidel.setup ({
 
 ### 6. Specify the program type
 
-For your Expense Management application you'll need to use a Transaction Stream program, so please set:
+For your Stream application you'll need to use a Transaction Stream program, so please set:
 
 ```javascript
 Fidel.setup ({
@@ -143,7 +143,7 @@ Fidel.setup ({
 
 ### 8. Set the allowed country(ies) of card issuance
 
-During card enrollment process, the cardholder needs to select the country where the card was issued. Expense Management use cases can be activated only for cards issued in the **United States**, **Canada** and **United Kingdom**. Please configure the SDK with the following allowed countries or a subset of these countries, depending on the countries where your application is available. If the subset contains a single country, the cardholders will not need to pick the country. The country that you set will be the default country of issue for the cards that are enrolled in your program.
+During card enrollment process, the cardholder needs to select the country where the card was issued. Stream use cases can be activated only for cards issued in the **United States**, **Canada** and **United Kingdom**. Please configure the SDK with the following allowed countries or a subset of these countries, depending on the countries where your application is available. If the subset contains a single country, the cardholders will not need to pick the country. The country that you set will be the default country of issue for the cards that are enrolled in your program.
 
 Use the `options` object to set the countries that you support:
 
@@ -166,7 +166,7 @@ Fidel.setup ({
 
 ### 9. Set Visa as the only supported card scheme
 
-For Expense Management applications, for now, only Visa card schemes are supported. Please configure the SDK with the following property:
+For Stream applications, for now, only Visa card schemes are supported. Please configure the SDK with the following property:
 
 ```javascript
 Fidel.setup ({

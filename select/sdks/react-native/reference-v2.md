@@ -275,7 +275,7 @@ This value is used in the consent text when enrolling a card issued in a United 
 
 Default value: `Fidel.ProgramType.transactionSelect`
 
-It specifies the type of program you want to enroll cards into. It also influences the flow that the SDK will show to cardholders when enrolling cards. The other supported value of this property is `Fidel.ProgramType.transactionStream`, but it is useful only for cards enrolled for Expense Management applications.
+It specifies the type of program you want to enroll cards into. It also influences the flow that the SDK will show to cardholders when enrolling cards. The other supported value of this property is `Fidel.ProgramType.transactionStream`, but it is useful only for cards enrolled for Stream applications.
 
 > Note: For your Loyalty application, you don't need to set this property as the default value is the correct one, for your use case.
 
@@ -300,7 +300,7 @@ Parameters:
 ### Fidel.start()
 
 Starts a card enrollment flow. If you set the `programType` to:
-1. `Fidel.ProgramType.transactionStream`, a verified card enrollment flow will be started, for a Transaction Stream program (usually used by Expense Management applications).
+1. `Fidel.ProgramType.transactionStream`, a verified card enrollment flow will be started, for a Transaction Stream program (usually used by Stream applications).
 2. `Fidel.ProgramType.transactionSelect`, a regular card enrollment flow will be started, for your Select Transactions program (usually used by Loyalty applications).
 
 ### Fidel.verifyCard(params)
